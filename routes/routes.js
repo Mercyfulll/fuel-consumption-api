@@ -26,11 +26,11 @@ export default function routes(fuel){
                 req.flash('error', "regNumber should not be blank")  
             }
 
-            await fuel.addCar(description,reg_number)
-            res.render('vehicle')
+            await fuel.addVehicle(description,reg_number)
+            res.redirect('vehicle')
 
         } catch (error) {
-            
+            console.log(error)
         }
     }
 

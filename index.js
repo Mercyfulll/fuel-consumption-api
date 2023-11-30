@@ -60,7 +60,7 @@ app.get('/', route.home)
 app.get('/vehicle', function(req,res){
     res.render('vehicle')
 })
-app.post('/vehicle', route.addVehicle)
+app.post('/vehicle',route.addVehicle)
 app.get('/refuel', function(req,res){
     res.render('refuel')
 })
