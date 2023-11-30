@@ -64,6 +64,7 @@ app.post('/vehicle',route.addVehicle)
 app.get('/refuel', function(req,res){
     res.render('refuel')
 })
+app.post('/refuel/:vehicleId', route.refill)
 
 
 app.listen(PORT, () => console.log(`App started on port: ${PORT}`));

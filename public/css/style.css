@@ -63,3 +63,14 @@ button {
     padding: 1em
 
 }
+.error{
+    font-size: medium;
+    color:crimson;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    justify-items: center;
+   
+}

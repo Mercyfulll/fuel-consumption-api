@@ -7,15 +7,19 @@
             <th>Total distance travelled</th>
             <th>Total fuel spent</th>
             <th>Fuel compustion</th>
+            <th></th>
         </tr>
+        <form action="/refuel/{{this.id}}" method="get">
         {{#each cars}}
         <tr>
             <td>{{this.description}}</td>
             <td>{{this.total_distance}}</td>
             <td>{{this.total_amount}}</td>
             <td>{{this.fuel_consumption}}</td>
+            <td><button>Refuel</button><td>
         </tr>
         {{/each}}
+        </form>
     </table>
 
 
