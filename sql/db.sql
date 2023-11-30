@@ -5,7 +5,8 @@ CREATE TABLE vehicles (
     total_liters NUMERIC,
     total_amount NUMERIC,
     total_distance NUMERIC,
-    fuel_consumption NUMERIC
+    fuel_consumption NUMERIC 
+    
 );
 
 CREATE TABLE fuel_entries (

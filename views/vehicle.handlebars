@@ -1,0 +1,18 @@
+<div class="container">
+     <h3>Add Vehicle </h3>
+        <span class="error">
+            {{messages.error}}
+        </span>
+    <div class="vehicleForm">
+        <form action="/vehicle" method="post">
+            
+            <label for="description">Description:</label>
+            <input type="text" class="description" name="description" placeholder="eg. Red BMW 120i">
+
+            <label for="regnum">Registration Number:</label>
+            <input type="text" class="regnum" name="regnum">
+
+            <button type="submit">Add Vehicle</button>
+        </form>
+    </div>
+</div>
