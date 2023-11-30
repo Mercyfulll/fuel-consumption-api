@@ -1,5 +1,6 @@
 export default function routes(fuel){
 
+    // A route to render a home page which renders a list of vehicles avialable  
     async function home(req,res){
         try {
             const cars = await fuel.vehicles()
@@ -10,6 +11,7 @@ export default function routes(fuel){
         }
     }
     
+    //A route to add a vehicle to the vehicles table 
     async function addVehicle (req,res){
         try {
             const description = req.body.description
@@ -33,7 +35,7 @@ export default function routes(fuel){
             console.log(error)
         }
     }
-
+    // A route for refuelling function 
     async function refill(req,res){
         try {
 
@@ -49,8 +51,21 @@ export default function routes(fuel){
             console.log(distance)
             console.log(filled_up)
 
-            // refuel(vehicleId, liters, amount, distance, filled_up)
-            res.render('refuel')
+            if (!vehicleId) {
+                req.flash('error', "vehicleId not specified")
+    
+            } else
+            if (!liters) {
+                req.flash('error', "liters not specified")
+                
+                
+            }else if (!amount) {
+                req.flash('error', "amount not specified")     
+            }
+            const carFueled = await fuel.vehicle(vehicleId)
+            
+            await  fuel.refuel(vehicleId, liters, amount, distance, filled_up)
+            res.render('refuel',{carFueled})
         } catch (error) {
             console.log(error)
         }

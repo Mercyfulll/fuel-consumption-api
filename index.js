@@ -51,10 +51,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get('/api/vehicles', fuelConsumptionAPI.vehicles);
-app.get('/api/vehicle', fuelConsumptionAPI.vehicle);
-app.post('/api/vehicle', fuelConsumptionAPI.addVehicle);
-app.post('/api/refuel', fuelConsumptionAPI.refuel);
+// app.get('/api/vehicles', fuelConsumptionAPI.vehicles);
+// app.get('/api/vehicle', fuelConsumptionAPI.vehicle);
+// app.post('/api/vehicle', fuelConsumptionAPI.addVehicle);
+// app.post('/api/refuel', fuelConsumptionAPI.refuel);
 
 app.get('/', route.home)
 app.get('/vehicle', function(req,res){
